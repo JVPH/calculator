@@ -1,0 +1,33 @@
+html, body {
+    min-height: 100vh;
+}
+
+body {
+    display: grid;
+    place-content: center;
+}
+.grid-col-span-2 {
+    grid-column: span 2;
+}
+
+.grid-col-span-4 {
+    grid-column: span 4;
+}
+
+.calculator-container {
+    display: grid;
+    height: 50vh;
+    width: 35vh;
+    /* grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr; */
+}
+
+.keys-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.clear, 
+.delete {
+    span:2;
+}
