@@ -20,14 +20,6 @@ body {
     width: 35vh;
     /* grid-template-columns: 1fr;
     grid-template-rows: 1fr 2fr; */
-}
-
-.keys-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-}
-
-.clear, 
-.delete {
-    span:2;
+    border: 4mm ridge #9CB4CC;
+    padding: 0.2em;
 }
