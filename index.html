@@ -8,37 +8,35 @@
     <link rel="stylesheet" href="./styles/style.css">
     <script src="./scripts/script.js" defer></script>
 </head>
-<body>
+<body>  
     <main class="calculator-container">
-        
-        <div class="keys-container">
-            <div class="output-screen grid-col-span-4">placeholder</div>
-            
-            <button class="btn clear grid-col-span-2">clear</button>
-            <button class="btn delete grid-col-span-2">delete</button>
-
-            <button class="btn" >7</button>
-            <button class="btn" >8</button>
-            <button class="btn" >9</button>
-            <button class="btn" >÷</button>
-
-            <button class="btn" >4</button>
-            <button class="btn" >5</button>
-            <button class="btn" >6</button>
-            <button class="btn" >×</button>
-
-            <button class="btn" >1</button>
-            <button class="btn" >2</button>
-            <button class="btn" >3</button>
-            <button class="btn" >−</button>
-
-            <button class="btn">.</button>
-            <button class="btn" >0</button>
-            <button class="btn">=</button>
-            <button class="btn" >+</button>
-
+        <div class="output-screen grid-col-span-4">
+            <div data-previous-operand></div>
+            <div data-current-operand></div>
         </div>
+        
+        <button class="clear grid-col-span-2" data-clear>clear</button>
+        <button class="delete grid-col-span-2" data-delete>delete</button>
+
+        <button data-key="55" data-number>7</button>
+        <button data-key="56" data-number>8</button>
+        <button data-key="57" data-number>9</button>
+        <button data-key="191" data-operation>÷</button>
+
+        <button data-key="52" data-number>4</button>
+        <button data-key="53" data-number>5</button>
+        <button data-key="54" data-number>6</button>
+        <button data-key="56" data-operation>×</button>
+
+        <button data-key="49" data-number>1</button>
+        <button data-key="50" data-number>2</button>
+        <button data-key="51" data-number>3</button>
+        <button data-key="173" data-operation>−</button>
+
+        <button data-number>.</button>
+        <button data-key="48" data-number>0</button>
+        <button data-key="61" data-equals>=</button>
+        <button data-key="61" data-operation>+</button>
     </main>
-    
 </body>
 </html>
