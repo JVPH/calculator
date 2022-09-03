@@ -26,7 +26,8 @@ body {
     display: grid;    
     grid-template-columns: repeat(4, 100px);
     grid-template-rows: minmax(120px, auto) repeat(5,100px);
-    border: 3mm solid #264653;    
+    border: 3mm solid #1e3842;    
+    border-radius: 6px; 
 }
 
 
