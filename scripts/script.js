@@ -111,6 +111,11 @@ deleteButton.addEventListener('click', () => {
 window.addEventListener('keydown', keyHandler);
 
 function keyHandler(e){
+    if(e.keyCode === 13){
+        calculator.compute();
+        calculator.updateDisplay();
+    }
+
     let key = document.querySelector(`button[data-key='${e.keyCode}']`); 
     
     if(!key) return;    
