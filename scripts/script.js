@@ -39,7 +39,7 @@ class Calculator {
             case '+':
                 computation = prev + current;
                 break;
-            case '-':
+            case '−':
                 computation = prev - current;
                 break;
             case '×':
@@ -82,14 +82,14 @@ const calculator = new Calculator(previousOperandTextElement, currentOperandText
 numberButtons.forEach(button => {
     button.addEventListener('click', () => {
         calculator.appendNumber(button.textContent);
-        calculator.updateDisplay()
+        calculator.updateDisplay();
     })
 });
 
 operationButtons.forEach(button => {
     button.addEventListener('click', () => {        
         calculator.chooseOperation(button.textContent);
-        calculator.updateDisplay()
+        calculator.updateDisplay();
     })
 });
 
@@ -107,3 +107,29 @@ deleteButton.addEventListener('click', () => {
     calculator.delete();
     calculator.updateDisplay();
 });
+
+window.addEventListener('keydown', keyHandler);
+
+function keyHandler(e){
+    let key = document.querySelector(`button[data-key='${e.keyCode}']`); 
+    
+    if(!key) return;    
+
+    if(e.shiftKey){
+        key = document.querySelector(`button[data-key='${e.keyCode} shift']`);    
+    } 
+
+    if(key.dataset.hasOwnProperty('number')){
+        calculator.appendNumber(key.textContent);
+        calculator.updateDisplay();
+    }else if(key.dataset.hasOwnProperty('operation')){
+        calculator.chooseOperation(key.textContent);
+        calculator.updateDisplay();
+    }else if(key.dataset.hasOwnProperty('delete')){
+        calculator.delete();
+        calculator.updateDisplay();        
+    }else {
+        calculator.compute();
+        calculator.updateDisplay();
+    }
+}
