@@ -11,7 +11,7 @@ html, body {
 body {
     display: grid;
     place-content: center;
-    background: linear-gradient(to right, #F5F7FA, #B8C6DB);
+    background: linear-gradient(to right, #F6D285, #BBF0F3);
 }
 
 .grid-col-span-2 {
@@ -26,18 +26,18 @@ body {
     display: grid;    
     grid-template-columns: repeat(4, 100px);
     grid-template-rows: minmax(120px, auto) repeat(5,100px);
-    border: 4mm solid #9CB4CC;    
+    border: 3mm solid #264653;    
 }
 
 
 
 .output-screen .previous-operand {
     font-size: 2rem;
-    color: rgba(0, 0, 0, .75);
+    
 }
 
 .output-screen {
-    background-color: #F5EDDC;
+    background-color: #264653;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -45,7 +45,9 @@ body {
     font-size: 2.5rem;
     word-break: break-all;
     padding-inline-end: 10px;
+    padding-inline-start: 10px;
     font-family: 'calculator';
+    color: #E76F51;
 }
 
 
@@ -53,19 +55,25 @@ body {
 .calculator-container button {
     outline: none;
     cursor: pointer;
-    border: 1px solid #9CB4CC;
+    border: 1px solid #264653;
     font-size: 2rem;
 }
 
 .clear,
 .delete {
-    background-color: #FA9494;
+    background-color: #F4A261;
 }
 
 .number {
-    background-color: #CFD2CF;
+    background-color: #2A9D8F;
+    
 }
 
 .calculator-container button:hover {
     filter: brightness(1.1);
+}
+
+.equals,
+.operation {
+    background-color: #E9C46A;
 }
